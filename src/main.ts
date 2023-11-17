@@ -2,7 +2,7 @@ import './assets/main.css'
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/HomeView.vue'
 import Login from '@/views/LoginView.vue'
-// import FollowUserView from '@/views/SearchUsersView.vue'
+import FollowingView from '@/views/FollowingView.vue'
 import NewsFeedView from '@/views/NewsFeedView.vue'
 import Register from '@/views/Register.vue'
 import { createApp } from 'vue'
@@ -21,12 +21,12 @@ const router = createRouter({
       name: 'feed',
       component: NewsFeedView
     },
-    // {
-    //   path: '/follow',
-    //   name: 'follow',
-    //   component: FollowUserView
-    // },
-    // 
+    {
+      path: '/follow',
+      name: 'follow',
+      component: FollowingView
+    },
+    
     {
       path: '/login',
       name: 'login',

@@ -49,13 +49,15 @@ async function delPost(postId: string) {
       <textarea v-model="body" />
       <button @click="doPost">Post</button>
     </div>
+    
+    <br />
 
     <h1>Posts</h1>
 
     <div v-if="posts.length === 0">There are no posts.</div>
 
-    <div class="flex flex-col gap-1">
-      <div v-for="post in posts" :key="post.id" class="bg-slate-200 p-1 flex">
+    <div class="flex flex-col gap-2">
+      <div v-for="post in posts" :key="post.id" class="bg-slate-100 p-2 flex rounded">
         <div class="flex-1">
           <b>{{ post.title }}</b>
           <p>{{ post.body }}</p>
