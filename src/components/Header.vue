@@ -7,7 +7,7 @@ const router = useRouter()
 let show = ref(false)
 
 watch (router.currentRoute, () => {
-  console.log('Route changed', router.currentRoute.value.path)
+  console.log('Route changed', router.currentRoute)
   show.value = router.currentRoute.value.path !== '/login' && router.currentRoute.value.path !== '/signup'
 })
 
