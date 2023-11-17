@@ -4,6 +4,7 @@ import Home from '@/views/HomeView.vue'
 import Login from '@/views/LoginView.vue'
 import FollowingView from '@/views/FollowingView.vue'
 import NewsFeedView from '@/views/NewsFeedView.vue'
+import UserView from '@/views/UserView.vue'
 import Register from '@/views/Register.vue'
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -26,7 +27,11 @@ const router = createRouter({
       name: 'follow',
       component: FollowingView
     },
-    
+    {
+      path: '/user/:id',
+      name: 'user',
+      component: UserView
+    },
     {
       path: '/login',
       name: 'login',
